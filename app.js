@@ -1,15 +1,31 @@
 let input = prompt("Please enter a command");
-let list = [];
+let list = [
+  "Wash dishes",
+  "Feed fish",
+  "Wash car",
+  "Sweep floor",
+  "Buy groceries",
+];
 
 while (input !== "QUIT") {
-  if (input === "QUIT") {
-    console.log("Ok, you quit");
-  } else if (input === "NEW") {
+  if (input === "NEW") {
     let listItem = prompt("Add an item to your to-do list");
     list.push(listItem);
     console.log(`You have added ${listItem} to the list`);
   } else if (input === "VIEW") {
     console.log(list);
+  } else if (input === "DELETE") {
+    console.log(list);
+    let index = prompt(
+      "Please enter the index of the item you want to delete from your list"
+    );
+    let item = list[index];
+    list.splice(index, 1);
+    {
+      console.log(`You have deleted ${item} from your list`);
+    }
   }
+
   input = prompt("Please enter a command");
 }
+console.log("You have quit");
