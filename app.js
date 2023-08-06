@@ -1,7 +1,7 @@
 let input = prompt("Please enter a command");
 let list = [
-  "Wash dishes", 
-  "Feed fish", 
+  "Wash dishes",
+  "Feed fish",
   "Wash car",
   "Sweep floor",
   "Buy groceries",
@@ -15,7 +15,6 @@ while (input !== "QUIT") {
   } else if (input === "VIEW") {
     console.log(list);
     for (let i = 0; i < list.length; i++) {
-     
       //   let item = list[i];
       console.log(`${i}  ${list[i]}`);
     }
